@@ -1,0 +1,219 @@
+.Header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  box-shadow: 0 5px 15px 1px rgba(53, 69, 87, 0.257);
+  transition: height 0.3s ease;
+  background-color: var(--background-white);
+  z-index: 50;
+  overflow: hidden;
+}
+
+.Header-linkLogo img {
+  width: 300px;
+}
+
+.Header-nav-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.Header-nav-ul {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.Header-nav-ul-a {
+  text-decoration: none;
+  color: var(--text-color-black);
+  font-size: var(--font-size-lg);
+  font-weight: 400;
+  padding-bottom: 8px;
+  display: inline-block;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  margin-top: 5px;
+}
+
+.Header-nav-ul-a::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  width: 0;
+  height: 3px;
+  background-color: var(--background-blue);
+  transition:
+    width 0.3s ease-in-out,
+    left 0.3s ease-in-out;
+}
+
+.Header-nav-ul-a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.Header-nav-ul-a:hover {
+  color: var(--text-color-blue);
+}
+
+.Header-nav-ul-a-actived {
+  color: var(--text-color-blue);
+}
+.Header-nav-ul-a-actived::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  height: 3px;
+  background-color: var(--background-blue);
+  transition:
+    width 0.3s ease-in-out,
+    left 0.3s ease-in-out;
+}
+
+.Header-nav-ul-a-button {
+  position: relative;
+  padding: 0.6rem 1.5rem;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-base);
+  font-weight: 400;
+}
+
+.Header-nav-ul-a-button-left {
+  margin-left: -1rem;
+}
+
+.Header-nav-ul-a-button p {
+  font-size: var(--font-size-lg);
+}
+
+.Header-nav-button-actived {
+  background-color: var(--background-blue);
+}
+
+.Header-nav-button-actived p {
+  color: var(--text-color-white);
+}
+
+.Header_openMain {
+  position: absolute;
+  right: 2rem;
+  width: 55px;
+  height: 45px;
+  z-index: 2;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  padding: 0;
+}
+.bars__menu {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.bars__menu span {
+  display: block;
+  width: 30px;
+  min-height: 3px;
+  background: var(--background-blue);
+  transition: all 0.3s;
+  transform-origin: center;
+}
+
+.Header_openMain:hover span {
+  background: var(--background-white);
+}
+
+.activeLine1__bars-menu {
+  position: absolute;
+  transform: rotate(45deg);
+}
+.activeLine2__bars-menu {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.activeLine3__bars-menu {
+  position: absolute;
+
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 1400px) {
+  .Header-linkLogo img {
+    width: 250px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .Header-container {
+    height: 85px;
+  }
+  .Header-linkLogo img {
+    width: 200px;
+  }
+
+  .Header-nav-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    background-color: var(--background-gray-black);
+    width: 100%;
+    max-width: 450px;
+    align-items: start;
+    padding: 3rem 1rem;
+    padding-top: 100px;
+    box-shadow: -5px 10px 15px 1px #35455742;
+    transform: translateX(110%);
+    transition: 0.5s ease;
+    overflow-y: auto;
+  }
+
+  .activeNav {
+    transform: translateX(0%);
+  }
+  .Header-nav-ul {
+    width: 100%;
+    flex-direction: column;
+  }
+  .Header-nav-ul-a-button-left {
+    margin-left: 0;
+  }
+
+  .Header-nav-ul-a {
+    font-size: var(--font-size-2xl);
+    color: var(--text-color-white);
+  }
+  .Header-nav-ul-a-button p {
+    font-size: var(--font-size-2xl);
+  }
+}
+
+@media (max-width: 850px) {
+  .Header-nav-ul-a {
+    font-size: var(--font-size-3xl);
+  }
+  .Header-nav-ul-a-button p {
+    font-size: var(--font-size-3xl);
+  }
+}

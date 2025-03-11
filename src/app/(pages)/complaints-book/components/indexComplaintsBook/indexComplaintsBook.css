@@ -1,0 +1,81 @@
+.indexComplaintsBook {
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem 3rem;
+  padding-top: 150px;
+}
+
+.indexComplaintsBook-logo {
+  position: fixed;
+  right: 10%;
+  bottom: -10%;
+  width: 60%;
+  z-index: 1;
+}
+
+.indexComplaintsBook-title {
+  font-size: var(--font-size-4xl);
+  color: var(--text-color-blue);
+  line-height: 1.1;
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.indexComplaintsBook_article {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 2;
+}
+.indexComplaintsBook_article-h2 {
+  font-size: var(--font-size-2xl);
+  color: var(--text-color-gray-black);
+  padding-top: 1rem;
+}
+
+.indexComplaintsBook_article p {
+  font-size: var(--font-size-lg);
+  color: var(--text-color-gray-black);
+}
+
+.indexComplaintsBook_form {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 1.5rem;
+  padding-top: 2rem;
+  z-index: 2;
+}
+
+.indexComplaintsBook_form-button {
+  padding: 0.8rem 2rem;
+  cursor: pointer;
+}
+
+.indexComplaintsBook_message {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--background-blue);
+  padding: 1.3rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 10px 1px var(--background-blue-ligth);
+  transform: translateX(150%);
+  z-index: 100;
+  transition: all 0.5s ease-in-out;
+}
+
+.indexComplaintsBook_message-view {
+  transform: translateX(0);
+}
+
+.indexComplaintsBook_message p {
+  color: var(--text-color-white);
+  font-size: var(--font-size-xl);
+}

@@ -1,0 +1,64 @@
+.tableManifestos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 3rem;
+  gap: 1rem;
+  z-index: 2;
+}
+
+.tableManifestos_wrapper {
+  width: 100%;
+  max-width: 1800px;
+
+  max-height: 80vh; /* Ajusta según necesidad */
+  overflow-y: auto; /* Permite el scroll solo en el cuerpo */
+  border-radius: 1rem;
+  border: 1px solid #ccc; /* Opcional: mejora la apariencia */
+}
+
+.tableManifestos_table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tableManifestos_table thead {
+  background-color: var(--background-gray-black);
+  position: sticky;
+  top: 0; /* Mantiene el encabezado fijo */
+  z-index: 2; /* Asegura que esté sobre las filas */
+}
+
+.tableManifestos_table th,
+.tableManifestos_table td {
+  padding: 10px;
+  font-size: var(--font-size-xs);
+}
+
+.tableManifestos_table th {
+  font-weight: 500;
+  color: var(--text-color-white);
+  white-space: nowrap;
+  padding: 15px;
+}
+
+.tableManifestos_table td {
+  font-weight: 400;
+}
+
+.tableManifestos-rowEven {
+  background-color: rgba(204, 204, 204, 0.327);
+}
+
+@media (max-width: 850px) {
+  .tableManifestos {
+    padding: 1rem;
+    padding-bottom: 4rem;
+  }
+  .tableManifestos_table th,
+  .tableManifestos_table td {
+    padding: 10px;
+    font-size: var(--font-size-lg);
+  }
+}

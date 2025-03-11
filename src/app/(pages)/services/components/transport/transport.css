@@ -1,0 +1,12 @@
+.transport_title {
+  line-height: 1.1;
+}
+
+.transport_content-description strong {
+  color: var(--text-color-blue);
+}
+
+.transport_content-p {
+  font-size: var(--font-size-xl);
+  margin-bottom: -0.8rem;
+}

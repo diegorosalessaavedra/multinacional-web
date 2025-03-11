@@ -1,0 +1,35 @@
+.button__animation {
+  position: relative;
+  background-color: var(--background-blue);
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 800ms ease all;
+  outline: none;
+}
+
+.button__animation:hover {
+  background: var(--background-gray-black);
+}
+.button__animation:before,
+.button__animation:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 3px;
+  width: 0;
+  background: var(--background-blue);
+  transition: 400ms ease all;
+}
+.button__animation:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+.button__animation:hover:before,
+.button__animation:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}

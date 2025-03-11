@@ -1,0 +1,140 @@
+.ourCompany {
+  width: 100%;
+  max-width: 1800px;
+  height: 100vh;
+  max-height: 1000px;
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+  padding: 0 3rem;
+  padding-top: 200px;
+  opacity: 0;
+  transform: translateY(30%);
+}
+
+.ourCompany_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 2;
+}
+
+.ourCompany_title {
+  font-size: var(--font-size-5xl);
+  color: var(--text-color-blue);
+  line-height: 1.1;
+}
+
+.ourCompany_description {
+  font-size: var(--font-size-2xl);
+  white-space: nowrap;
+}
+.ourCompany_button {
+  position: relative;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  overflow: hidden;
+  border-radius: 2rem;
+  background-color: var(--background-white);
+  border: 1px solid var(--background-blue);
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+}
+
+.ourCompany_button p {
+  font-size: var(--font-size-xl);
+  color: var(--text-color-blue);
+  transition: color 0.3s ease-in-out; /* Agregar transición */
+}
+
+.ourCompany_button svg {
+  width: 15px;
+  fill: var(--text-color-blue); /* Cambiado de color a fill */
+  transition: fill 0.3s ease-in-out; /* Agregar transición */
+}
+
+.ourCompany_button:hover p,
+.ourCompany_button:hover svg {
+  color: var(--text-color-white);
+  fill: var(--text-color-white); /* Cambiar fill del SVG */
+}
+
+/* Animación del fondo */
+.ourCompany_button::before {
+  content: '';
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: var(--background-blue);
+  position: absolute;
+  transform: skewX(-20deg);
+  left: -10%;
+  opacity: 1;
+  top: 0;
+  z-index: -12;
+  transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+}
+
+.ourCompany_button:hover::before {
+  width: 116%;
+}
+
+.ourCompany_button::after {
+  content: '';
+  width: 0%;
+  height: 100%;
+  display: block;
+  background: var(--background-blue-ligth);
+  position: absolute;
+  transform: skewX(-20deg);
+  left: -10%;
+  opacity: 0;
+  top: 0;
+  z-index: -15;
+  transition: all 0.4s cubic-bezier(0.2, 0.95, 0.57, 0.99);
+  box-shadow: 2px 0px 14px rgba(0, 0, 0, 0.6);
+}
+
+.ourCompany_button:hover::after {
+  opacity: 1;
+  width: 120%;
+}
+
+.ourCompany_image {
+  position: relative;
+  width: 100%;
+  overflow: visible;
+  margin: auto;
+}
+
+.ourCompany_image img {
+  position: relative;
+  width: 100%;
+  min-width: 250px;
+  height: auto;
+  object-fit: fill;
+}
+
+@media (max-width: 850px) {
+  .ourCompany {
+    width: 100%;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+    padding-top: 120px;
+  }
+
+  .ourCompany_description {
+    white-space: wrap;
+  }
+
+  .ourCompany_description br {
+    display: none;
+  }
+}

@@ -1,0 +1,85 @@
+.missionVision {
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  display: flex;
+  gap: 2rem;
+  padding: 0 8rem;
+  padding-bottom: 7rem;
+  padding-top: 200px;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(30%);
+}
+
+.missionVision::after {
+  position: absolute;
+  content: '';
+  display: block;
+  bottom: -110%;
+  left: 0;
+  right: auto;
+  width: 100%;
+  height: 100%;
+  transform-origin: top left;
+  transform: skew(0deg, 20deg);
+  background-color: #f1f6fa;
+  z-index: -1;
+}
+.missionVision_mision {
+  position: relative;
+  width: 50%;
+  height: min-content;
+  overflow: hidden;
+  border-radius: 2rem;
+}
+
+.missionVision_mision-img {
+  width: 100%;
+  filter: brightness(0.7);
+}
+
+.missionVision_mision-article {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 4;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+}
+
+.missionVision_mision-article h2 {
+  color: var(--text-color-white);
+  font-size: var(--font-size-4xl);
+}
+
+.missionVision_mision-article h2::after {
+  content: '';
+  display: block;
+  width: 5.5rem;
+  border-bottom: 5px dotted var(--text-color-white);
+  margin-top: 1rem;
+}
+
+.missionVision_mision-article p {
+  color: var(--text-color-white);
+  font-size: var(--font-size-xl);
+}
+
+@media (max-width: 1100px) {
+  .missionVision {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .missionVision {
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .missionVision_mision {
+    width: 100%;
+  }
+}

@@ -1,0 +1,140 @@
+.servicesHome_container {
+  width: 100%;
+  position: relative;
+  background-color: var(--background-white);
+  z-index: 2;
+}
+.servicesHome {
+  position: relative;
+  width: 100%;
+  max-width: 1800px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0 4rem;
+  background-color: var(--background-white);
+  opacity: 0;
+  transform: translateY(30%);
+}
+
+.servicesHome_transport {
+  position: relative;
+  width: 50%;
+  min-width: 300px;
+  overflow: hidden;
+  border-radius: 2rem;
+  cursor: pointer;
+  margin: 4rem;
+}
+
+.servicesHome_transport_img {
+  filter: brightness(0.6);
+  transition: all 0.5s ease;
+}
+
+.servicesHome_transport_img:hover {
+  scale: 1.2;
+}
+.servicesHome_transport_article {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.servicesHome_transport_article h2 {
+  color: var(--text-color-white);
+  font-size: var(--font-size-4xl);
+  line-height: 1.1;
+}
+
+.servicesHome_transport_article button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.servicesHome_transport_article img {
+  width: 15px;
+}
+
+.servicesHome_transport_article p {
+  font-weight: 500;
+  font-size: var(--font-size-lg);
+  color: var(--text-color-blue-ligth);
+}
+
+.servicesHome-data {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 1rem;
+}
+
+.servicesHome-data-h2 {
+  width: min-content;
+  line-height: 1.1;
+  color: var(--text-color-gray-black);
+  font-size: var(--font-size-5xl);
+  white-space: nowrap;
+}
+
+.servicesHome-data-h2 strong {
+  color: var(--text-color-blue);
+}
+
+.servicesHome-data-h2::after {
+  content: '';
+  display: block;
+  width: 4.5rem;
+  border-bottom: 4px dotted var(--text-color-blue);
+  margin-top: 1rem;
+}
+
+.servicesHome-data-p {
+  font-size: var(--font-size-xl);
+  color: var(--text-color-black);
+  /* white-space: nowrap; */
+}
+
+.servicesHome-data-p strong {
+  color: var(--text-color-blue);
+}
+
+@media (max-width: 1100px) {
+  .servicesHome_transport {
+    position: relative;
+    width: 50%;
+    min-width: 300px;
+    overflow: hidden;
+    border-radius: 2rem;
+    cursor: pointer;
+    margin: 1rem;
+  }
+}
+
+@media (max-width: 850px) {
+  .servicesHome {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .servicesHome_transport,
+  .servicesHome-data {
+    width: 100%;
+  }
+  .servicesHome-data-p {
+    font-size: var(--font-size-2xl);
+    color: var(--text-color-black);
+  }
+}

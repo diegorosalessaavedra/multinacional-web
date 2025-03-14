@@ -7,7 +7,7 @@
   display: flex;
   gap: 2rem;
   padding: 0 3rem;
-  padding-top: 200px;
+  padding-top: 160px;
   opacity: 0;
   transform: translateY(30%);
 }

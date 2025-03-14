@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import { Titillium_Web } from 'next/font/google'
 import './globals.css'
 import './animations.css'
@@ -11,9 +10,11 @@ import 'swiper/css/scrollbar'
 import Header from './components/header/Header'
 import Footer from './components/footer/Footer'
 import Image from 'next/image'
+import { Metadata } from 'next'
 
 const lato = Titillium_Web({
   weight: ['200', '300', '400', '600', '700', '900'],
+  subsets: ['latin', 'latin-ext'],
 })
 
 export const metadata: Metadata = {

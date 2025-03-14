@@ -38,8 +38,10 @@ export default function ManifestFilter({ setManifestos }: Props) {
   }
 
   const handleLogout = () => {
-    document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
-    window.location.reload()
+    if (typeof window !== 'undefined') {
+      document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;'
+      window.location.reload()
+    }
   }
 
   useIntersectionObserverOnResize('manifestFilter')
@@ -48,7 +50,7 @@ export default function ManifestFilter({ setManifestos }: Props) {
     <section className="manifestFilter" id="manifestFilter">
       <article className="manifestFilter_title-container">
         <h1 className="manifestFilter-title title">Tus Manifiestos</h1>
-        {document.cookie && (
+        {typeof window !== 'undefined' && document.cookie && (
           <button className="manifestFilter_title-button button_animated" onClick={handleLogout}>
             <p>Cerrar Sesión</p>
           </button>

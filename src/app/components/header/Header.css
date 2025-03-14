@@ -87,11 +87,6 @@
   position: relative;
   padding: 0.6rem 1.5rem;
   border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--font-size-base);
-  font-weight: 400;
 }
 
 .Header-nav-ul-a-button-left {
@@ -99,6 +94,7 @@
 }
 
 .Header-nav-ul-a-button p {
+  font-weight: 400;
   font-size: var(--font-size-lg);
 }
 

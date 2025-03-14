@@ -43,7 +43,7 @@ export default function IndexETracking({ setDataTraking, setLoading }: Props) {
             onChange={(e) => setCode(e.target.value)}
             maxLength={8}
           />
-          <button className="indexETracking_article-button button_animated" onClick={handleCode}>
+          <button className=" button_animated indexETracking_article-button" onClick={handleCode}>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="currentColor">
               <path d="M7.5,16.5L14,10H0V8h14L7.5,1.5L9,0l9,9l-9,9L7.5,16.5z"></path>
             </svg>

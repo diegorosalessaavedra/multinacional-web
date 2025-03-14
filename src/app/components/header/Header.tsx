@@ -89,7 +89,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              className={`Header-nav-ul-a-button button_animated ${isActiveButton('/e-tracking')}`}
+              className={`button_animated Header-nav-ul-a-button  ${isActiveButton('/e-tracking')}`}
               href="/e-tracking"
               title="Seguimiento de carga en tiempo real"
             >
@@ -98,7 +98,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              className={`Header-nav-ul-a-button Header-nav-ul-a-button-left button_animated`}
+              className={` button_animated Header-nav-ul-a-button Header-nav-ul-a-button-left`}
               href="https://wa.me/51997279046"
               title="Contáctanos - Multinacional Service Corp."
               target="_blank"
@@ -108,7 +108,7 @@ export default function Header() {
           </li>
           <li>
             <Link
-              className={`Header-nav-ul-a-button Header-nav-ul-a-button-left button_animated ${isActiveButton('/intranet')}`}
+              className={` button_animated Header-nav-ul-a-button Header-nav-ul-a-button-left ${isActiveButton('/intranet')}`}
               href="/intranet"
               title="intranet"
             >

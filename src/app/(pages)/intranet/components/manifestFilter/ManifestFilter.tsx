@@ -51,7 +51,7 @@ export default function ManifestFilter({ setManifestos }: Props) {
       <article className="manifestFilter_title-container">
         <h1 className="manifestFilter-title title">Tus Manifiestos</h1>
         {typeof window !== 'undefined' && document.cookie && (
-          <button className="manifestFilter_title-button button_animated" onClick={handleLogout}>
+          <button className=" button_animated manifestFilter_title-button" onClick={handleLogout}>
             <p>Cerrar Sesión</p>
           </button>
         )}

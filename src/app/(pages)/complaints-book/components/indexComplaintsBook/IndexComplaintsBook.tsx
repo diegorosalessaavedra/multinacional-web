@@ -155,7 +155,7 @@ export default function IndexComplaintsBook() {
           value=""
           onChange={handleInputChange('file')}
         />
-        <button className="indexComplaintsBook_form-button button_animated" type="submit">
+        <button className=" button_animated indexComplaintsBook_form-button" type="submit">
           <p>Enviar</p>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18" fill="currentColor">
             <path d="M7.5,16.5L14,10H0V8h14L7.5,1.5L9,0l9,9l-9,9L7.5,16.5z"></path>

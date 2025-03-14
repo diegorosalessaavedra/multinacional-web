@@ -73,7 +73,7 @@ export default function Login() {
           />
           {error?.includes('contraseña') && <span className="login_form-span">{error}</span>}
         </div>
-        <button className="login_form-button button_animated" type="submit">
+        <button className=" button_animated login_form-button" type="submit">
           <p>Ingresar</p>
         </button>
       </form>

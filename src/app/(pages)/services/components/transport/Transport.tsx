@@ -64,7 +64,7 @@ export default function Transport() {
         <Link
           href="tel:51983806682"
           target="_blank"
-          className="button_animated"
+          className="button_animated ourCompany_button"
           title="Contáctanos para soluciones de transporte de carga"
           aria-label="Contáctanos para soluciones de transporte de carga"
         >

@@ -56,6 +56,7 @@
 .indexComplaintsBook_form-button {
   padding: 0.8rem 2rem;
   cursor: pointer;
+  border-radius: 1rem;
 }
 
 .indexComplaintsBook_message {

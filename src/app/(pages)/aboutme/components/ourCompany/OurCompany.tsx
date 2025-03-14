@@ -51,7 +51,7 @@ export default function OurCompany() {
         </p>
         <Link
           href="/contacto"
-          className="button_animated"
+          className="button_animated ourCompany_button"
           title="Contáctanos para soluciones de transporte de carga"
           aria-label="Contáctanos para soluciones de transporte de carga"
         >

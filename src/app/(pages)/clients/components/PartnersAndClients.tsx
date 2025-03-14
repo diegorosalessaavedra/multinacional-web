@@ -58,11 +58,11 @@ export default function PartnersAndClients() {
           cual se ve reflejado en la fortificación de los <br /> diferentes vínculos comerciales que
           trascienden en el tiempo.
         </p>
-        <p className="partnersAndClients_content-p">Contáctanos:</p>
+        <p className="partnersAndClients_content-p ">Contáctanos:</p>
         <Link
           href="tel:51983806682"
           target="_blank"
-          className="button_animated"
+          className="button_animated partnersAndClients_content_link"
           title="Contáctanos para soluciones de transporte de carga"
           aria-label="Contáctanos para soluciones de transporte de carga"
         >

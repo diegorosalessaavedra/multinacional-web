@@ -121,6 +121,12 @@
   border-radius: 0.5rem;
   padding: 0;
 }
+
+.Header_openMain .button_animated {
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
 .bars__menu {
   position: relative;
   width: 100%;

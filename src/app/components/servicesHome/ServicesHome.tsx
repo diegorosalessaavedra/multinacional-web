@@ -10,7 +10,7 @@ export default function ServicesHome() {
   return (
     <div className="servicesHome_container">
       <section className="servicesHome" id="servicesHome">
-        <Link href="/servicios" className="servicesHome_transport">
+        <Link href="/services" className="servicesHome_transport">
           <Image
             src="/image_servicio.jpg"
             alt="Más información sobre nuestras soluciones de transporte"

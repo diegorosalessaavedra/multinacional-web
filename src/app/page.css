@@ -63,9 +63,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 1rem 2rem;
   overflow: hidden;
-  border-radius: 2rem;
   background-color: var(--background-white);
   border: 1px solid var(--background-blue);
   z-index: 10;

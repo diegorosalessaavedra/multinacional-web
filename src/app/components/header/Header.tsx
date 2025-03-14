@@ -35,11 +35,13 @@ export default function Header() {
         />
       </Link>
 
-      <div className="Header_openMain button_animated" onClick={toggleMenu}>
-        <div className={`bars__menu ${openMain ? 'active' : ''}`}>
-          <span className={`line1__bars-menu ${openMain ? 'activeLine1__bars-menu' : ''}`}></span>
-          <span className={`line2__bars-menu ${openMain ? 'activeLine2__bars-menu' : ''}`}></span>
-          <span className={`line3__bars-menu ${openMain ? 'activeLine3__bars-menu' : ''}`}></span>
+      <div className="Header_openMain">
+        <div className=" button_animated" onClick={toggleMenu}>
+          <div className={`bars__menu ${openMain ? 'active' : ''}`}>
+            <span className={`line1__bars-menu ${openMain ? 'activeLine1__bars-menu' : ''}`}></span>
+            <span className={`line2__bars-menu ${openMain ? 'activeLine2__bars-menu' : ''}`}></span>
+            <span className={`line3__bars-menu ${openMain ? 'activeLine3__bars-menu' : ''}`}></span>
+          </div>
         </div>
       </div>
 

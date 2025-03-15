@@ -3,15 +3,17 @@ import axios from 'axios'
 import { useState } from 'react'
 import './indexETracking.css'
 
-import { LatamResponse } from '@/interfaces'
+import { LatamResponse, PickUp } from '@/interfaces'
 import useIntersectionObserverOnResize from '@/hooks/useIntersectionObserverOnResize'
 
 interface Props {
   setDataTraking: (value: LatamResponse) => void
+  setPickUp: (value: PickUp) => void
+
   setLoading: (value: boolean) => void
 }
 
-export default function IndexETracking({ setDataTraking, setLoading }: Props) {
+export default function IndexETracking({ setDataTraking, setLoading, setPickUp }: Props) {
   const [code, setCode] = useState<string>('')
 
   const handleCode = async () => {
@@ -21,6 +23,14 @@ export default function IndexETracking({ setDataTraking, setLoading }: Props) {
     try {
       const res = await axios.post(url, data)
       setDataTraking(res.data.parsedData)
+    } finally {
+      setLoading(false)
+    }
+
+    const url2 = `${process.env.NEXT_PUBLIC_URL_API}/e-tracking/${code}`
+    try {
+      const res2 = await axios.get(url2)
+      setPickUp(res2.data.data)
     } finally {
       setLoading(false)
     }

@@ -1,11 +1,12 @@
 'use client'
-import { LatamResponse } from '@/interfaces'
+import { LatamResponse, PickUp } from '@/interfaces'
 import './dataETracking.css'
 import React from 'react'
 import useIntersectionObserverOnResize from '@/hooks/useIntersectionObserverOnResize'
 
 interface Props {
   dataTraking: LatamResponse | undefined
+  pickUp: PickUp | undefined
 }
 
 // Declarar el array de ciudades antes de usarlo
@@ -27,7 +28,7 @@ const citys = [
   { code: 'JUL', name: 'JULIACA' },
 ]
 
-export default function DataETracking({ dataTraking }: Props) {
+export default function DataETracking({ dataTraking, pickUp }: Props) {
   function citysFind(text: string | undefined) {
     if (!text) return undefined
     const found = citys.find((city) => city.code === text)
@@ -55,123 +56,122 @@ export default function DataETracking({ dataTraking }: Props) {
     )
   }
 
-  useIntersectionObserverOnResize('dataETracking')
-
   return (
-    <section className="dataETracking" id="dataETracking">
-      <h2 className="dataETracking_code">{dataTraking?.code}</h2>
+    <>
+      {dataTraking?.code ? (
+        <section className="dataETracking">
+          <h2 className="dataETracking_code">{dataTraking?.code}</h2>
 
-      {/* <div className="dataETracking_basic">
-        <table>
-          <thead>
-            <tr>
-              <th style={{ borderLeft: '0px' }}>Origen</th>
-              <th>Destino</th>
-              <th>Estado</th>
-              <th>Producto</th>
-              <th>Piezas</th>
-              <th>Peso</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style={{ padding: '5px', backgroundColor: 'white' }}> </td>
-            </tr>
-            <tr>
-              <td>{dataTraking?.basic.Origen}</td>
-              <td>{dataTraking?.basic.Destino}</td>
-              <td>{dataTraking?.basic.Productos}</td>
-              <td>{dataTraking?.basic.Commodity === 'PINTINHOS' ? 'AVES' : ''}</td>
-              <td>{dataTraking?.basic.Piezas}</td>
-              <td>{dataTraking?.basic.Peso.slice(0, -1)} kg</td>
-            </tr>
-          </tbody>
-        </table>
-      </div> */}
-
-      <div className="dataETracking_details">
-        <table>
-          <thead>
-            <tr>
-              <th style={{ borderLeft: '0px' }}>Origen</th>
-              <th>Destino</th>
-              <th>Vuelos</th>
-              <th>
-                Estimado tiempo <br />
-                de despegue
-              </th>
-              <th>
-                Estimado tiempo <br />
-                de aterrizaje
-              </th>
-              <th>Piezas</th>
-              <th>Peso</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style={{ padding: '5px', backgroundColor: 'white' }}> </td>
-            </tr>
-            {dataTraking?.details.map((detail, index) => (
-              <tr
-                key={index}
-                className={
-                  index % 2 === 0 ? 'dataETracking_details-rowEven' : 'dataETracking_details-rowOdd'
-                }
-              >
-                <td>{citysFind(detail.Origen)}</td>
-                <td>{citysFind(detail.Destino)}</td>
-                <td>{detail.Vuelos}</td>
-                <td>{formatStringWithBR(detail.ETD)}</td>
-                <td>{formatStringWithBR(detail.ETA)}</td>
-                <td>{detail.Piezas}</td>
-                <td>{detail.Peso.slice(0, -1)} kg</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-
-      <div className="dataETracking_events">
-        <h3>Seguimiento de embarque</h3>
-        <table>
-          <thead>
-            <tr>
-              <th style={{ borderLeft: '0px' }}>Evento</th>
-              <th>Ciudad</th>
-              <th>Vuelos</th>
-              <th>Piezas / Peso Real</th>
-              <th>Tiempo real</th>
-              <th>Parcialización</th>
-              <th>Consignatario</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td style={{ padding: '5px', backgroundColor: 'white' }}> </td>
-            </tr>
-            {dataTraking?.events
-              .slice()
-              .reverse()
-              .map((event, index) => (
-                <tr
-                  key={index}
-                  className={
-                    index % 2 === 0 ? 'dataETracking_events-rowEven' : 'dataETracking_events-rowOdd'
-                  }
-                >
-                  <td>{event.Descripción}</td>
-                  <td>{citysFind(event.Posta)}</td>
-                  <td>{formatStringWithBR(event.Vuelos)}</td>
-                  <td>{event['Piezas/Peso Real']?.slice(0, -4)} Kg</td>
-                  <td>{event['Tiempo real']}</td>
-                  <td>{event.SHSH ? 'Si' : ''}</td>
-                  <td>{event.Adicional}</td>
+          <div className="dataETracking_details">
+            <table>
+              <thead>
+                <tr>
+                  <th style={{ borderLeft: '0px' }}>Origen</th>
+                  <th>Destino</th>
+                  <th>Vuelos</th>
+                  <th>
+                    Estimado tiempo <br />
+                    de despegue
+                  </th>
+                  <th>
+                    Estimado tiempo <br />
+                    de aterrizaje
+                  </th>
+                  <th>Piezas</th>
+                  <th>Peso</th>
                 </tr>
-              ))}
-          </tbody>
-        </table>
-      </div>
-    </section>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style={{ padding: '5px', backgroundColor: 'white' }}> </td>
+                </tr>
+
+                {dataTraking?.details.map((detail, index) => (
+                  <tr
+                    key={index}
+                    className={
+                      index % 2 === 0
+                        ? 'dataETracking_details-rowEven'
+                        : 'dataETracking_details-rowOdd'
+                    }
+                  >
+                    <td>{citysFind(detail.Origen)}</td>
+                    <td>{citysFind(detail.Destino)}</td>
+                    <td>{detail.Vuelos}</td>
+                    <td>{formatStringWithBR(detail.ETD)}</td>
+                    <td>{formatStringWithBR(detail.ETA)}</td>
+                    <td>{detail.Piezas}</td>
+                    <td>{detail.Peso.slice(0, -1)} kg</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <div className="dataETracking_events">
+            <h3>Seguimiento de embarque</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th style={{ borderLeft: '0px' }}>Evento</th>
+                  <th>Ciudad</th>
+                  <th>Vuelos</th>
+                  <th>Piezas / Peso Real</th>
+                  <th>Tiempo real</th>
+                  <th>Parcialización</th>
+                  <th>Consignatario</th>
+                </tr>
+              </thead>
+              <tbody>
+                {}
+                <tr>
+                  <td style={{ padding: '5px', backgroundColor: 'white' }}> </td>
+                </tr>
+                <tr className="dataETracking_events-rowEven">
+                  <td style={{ color: '#1a66a3' }}>Recogo de carga en planta</td>
+                  <td style={{ color: '#1a66a3' }}>LIMA</td>
+                  <td></td>
+                  <td></td>
+                  <td style={{ color: '#1a66a3' }}>
+                    {pickUp?.pick_up === 'PENDIENTE'
+                      ? 'Pendiente de Realizar'
+                      : pickUp?.pick_up_hora}
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                {dataTraking?.events
+                  .slice()
+                  .reverse()
+                  .map((event, index) => (
+                    <tr
+                      key={index}
+                      className={
+                        index % 2 === 0
+                          ? 'dataETracking_events-rowOdd'
+                          : 'dataETracking_events-rowEven'
+                      }
+                    >
+                      <td>{event.Descripción}</td>
+                      <td>{citysFind(event.Posta)}</td>
+                      <td>{formatStringWithBR(event.Vuelos)}</td>
+                      <td>{event['Piezas/Peso Real']?.slice(0, -4)} Kg</td>
+                      <td>{event['Tiempo real']}</td>
+                      <td>{event.SHSH ? 'Si' : ''}</td>
+                      <td>{event.Adicional}</td>
+                    </tr>
+                  ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+      ) : (
+        <div className="dataETracking_message">
+          <p>
+            Guia aera inexistente, verifique que su valor sea correcto o contacte al area de ventas
+          </p>
+        </div>
+      )}
+    </>
   )
 }

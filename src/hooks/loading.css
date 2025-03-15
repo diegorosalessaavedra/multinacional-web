@@ -38,6 +38,7 @@
   font-size: 18px;
   color: var(--background-white);
   font-weight: bold;
+  text-align: center;
 }
 
 @keyframes spin {

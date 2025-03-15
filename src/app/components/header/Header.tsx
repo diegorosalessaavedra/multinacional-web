@@ -93,7 +93,17 @@ export default function Header() {
               href="/e-tracking"
               title="Seguimiento de carga en tiempo real"
             >
-              <p>Seguimiento</p>
+              <p>Seguimiento a la carga</p>
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              className={` button_animated Header-nav-ul-a-button Header-nav-ul-a-button-left ${isActiveButton('/intranet')}`}
+              href="/intranet"
+              title="intranet"
+            >
+              <p>Intranet</p>
             </Link>
           </li>
           <li>
@@ -104,15 +114,6 @@ export default function Header() {
               target="_blank"
             >
               <p>Contáctanos</p>
-            </Link>
-          </li>
-          <li>
-            <Link
-              className={` button_animated Header-nav-ul-a-button Header-nav-ul-a-button-left ${isActiveButton('/intranet')}`}
-              href="/intranet"
-              title="intranet"
-            >
-              <p>Intranet</p>
             </Link>
           </li>
         </ul>

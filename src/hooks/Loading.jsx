@@ -8,7 +8,10 @@ export default function Loading() {
         <Image src="/iso_logo_light.svg" alt="multinacional" width={500} height={500} />
         <div className="spinner"> </div>
       </div>
-      <p className="loading-text">Cargando...</p>
+      <p className="loading-text">
+        Cargando... <br />
+        Multinacional Service Corp
+      </p>
     </div>
   )
 }

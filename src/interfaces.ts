@@ -80,3 +80,9 @@ export interface Cliente {
   createdAt: string
   updatedAt: string
 }
+
+export interface PickUp {
+  id: number
+  pick_up: string
+  pick_up_hora: string | null
+}

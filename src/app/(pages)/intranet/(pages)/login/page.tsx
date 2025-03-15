@@ -18,7 +18,6 @@ export default function Login() {
   })
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string>()
-  const router = useRouter()
 
   const handleInputChange = (name: keyof Data) => (value: string | File | null) => {
     setDataForm((prevData) => ({

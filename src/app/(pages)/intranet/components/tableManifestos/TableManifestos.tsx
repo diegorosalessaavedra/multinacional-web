@@ -30,7 +30,10 @@ export default function TableManifestos({ manifestos }: Props) {
               <th>FRANJA</th>
               <th>VUELO</th>
               <th>ITINERARIO</th>
-              <th>RECOGO DE CARGA</th>
+              <th>
+                RECOGO DE CARGA <br />
+                EN PLANTA
+              </th>
 
               <th>CONSIGNATARIO 1</th>
               <th>CONSIGNATARIO 2</th>

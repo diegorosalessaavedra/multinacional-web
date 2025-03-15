@@ -67,7 +67,8 @@ export interface Manifiesto {
   createdAt: string
   updatedAt: string
   cliente: Cliente
-  tipo_caja: string | null
+  tipo_carga: string | null
+  pick_up_hora: string | null
 }
 
 export interface Cliente {

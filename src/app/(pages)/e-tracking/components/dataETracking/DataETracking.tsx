@@ -2,7 +2,6 @@
 import { LatamResponse, PickUp } from '@/interfaces'
 import './dataETracking.css'
 import React from 'react'
-import useIntersectionObserverOnResize from '@/hooks/useIntersectionObserverOnResize'
 
 interface Props {
   dataTraking: LatamResponse | undefined

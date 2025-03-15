@@ -1,4 +1,3 @@
-import formatFirstHourAndSubtract from '@/hooks/formatFirstHourAndSubtract'
 import { Manifiesto } from '@/interfaces'
 import './tableManifestos.css'
 
@@ -29,8 +28,9 @@ export default function TableManifestos({ manifestos }: Props) {
               </th>
               <th>FRANJA</th>
               <th>VUELO</th>
-              <th>CIERRE</th>
               <th>ITINERARIO</th>
+              <th>RECOGO DE CARGA</th>
+
               <th>CONSIGNATARIO 1</th>
               <th>CONSIGNATARIO 2</th>
               <th>OBSERVACIONES</th>
@@ -46,14 +46,14 @@ export default function TableManifestos({ manifestos }: Props) {
                 <td style={{ whiteSpace: 'nowrap' }}>{manifest.fecha_manifiesto}</td>
                 <td>{manifest.proveedor}</td>
                 <td style={{ minWidth: '200px' }}>{manifest.cliente.nombre}</td>
-                <td>{manifest.tipo_caja}</td>
+                <td>{manifest.tipo_carga}</td>
                 <td>{manifest.cajas_enviadas}</td>
                 <td>{manifest.destino}</td>
                 <td>{manifest.orden_servicio}</td>
                 <td>{manifest.producto}</td>
                 <td>{manifest.vuelo}</td>
-                <td> {formatFirstHourAndSubtract(manifest.itinerario)}</td>
                 <td>{manifest.itinerario}</td>
+                <td>{manifest.pick_up_hora}</td>
                 <td style={{ minWidth: '200px' }}>{manifest.consignatario1}</td>
                 <td style={{ minWidth: '200px' }}>{manifest.consignatario2}</td>
                 <td>{manifest.observacion}</td>

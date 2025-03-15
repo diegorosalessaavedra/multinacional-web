@@ -57,6 +57,7 @@ export default function TableManifestos({ manifestos }: Props) {
                   <Link
                     href={`/e-tracking/${manifest.orden_servicio}`}
                     title="Conócenos - Quiénes somos"
+                    target="_blank"
                   >
                     {manifest.orden_servicio}
                   </Link>

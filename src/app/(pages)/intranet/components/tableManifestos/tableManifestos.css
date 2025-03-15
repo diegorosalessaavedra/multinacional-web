@@ -53,6 +53,7 @@
 
 .tableManifestos_table a {
   color: var(--text-color-blue);
+  text-decoration: underline;
 }
 
 @media (max-width: 850px) {

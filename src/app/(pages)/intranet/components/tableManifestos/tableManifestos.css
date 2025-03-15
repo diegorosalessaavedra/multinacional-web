@@ -51,6 +51,10 @@
   background-color: rgba(204, 204, 204, 0.327);
 }
 
+.tableManifestos_table a {
+  color: var(--text-color-blue);
+}
+
 @media (max-width: 850px) {
   .tableManifestos {
     padding: 1rem;

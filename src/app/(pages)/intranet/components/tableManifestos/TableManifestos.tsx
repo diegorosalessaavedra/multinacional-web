@@ -1,6 +1,7 @@
 import { Manifiesto } from '@/interfaces'
 import './tableManifestos.css'
 import formatDate from '@/hooks/formatDate'
+import Link from 'next/link'
 
 interface Props {
   manifestos: Manifiesto[] | undefined
@@ -52,7 +53,14 @@ export default function TableManifestos({ manifestos }: Props) {
                 <td>{manifest.tipo_carga}</td>
                 <td>{manifest.cantidad}</td>
                 <td>{manifest.destino}</td>
-                <td>{manifest.orden_servicio}</td>
+                <td>
+                  <Link
+                    href={`/e-tracking/${manifest.orden_servicio}`}
+                    title="Conócenos - Quiénes somos"
+                  >
+                    {manifest.orden_servicio}
+                  </Link>
+                </td>
                 <td>{manifest.vuelo}</td>
                 <td>{manifest.itinerario}</td>
                 <td>{manifest.pick_up_hora}</td>

@@ -27,7 +27,6 @@ export default function TableManifestos({ manifestos }: Props) {
                 ORDEN DE <br />
                 SERVICIO
               </th>
-              <th>FRANJA</th>
               <th>VUELO</th>
               <th>ITINERARIO</th>
               <th>
@@ -51,10 +50,9 @@ export default function TableManifestos({ manifestos }: Props) {
                 <td>{manifest.proveedor}</td>
                 <td style={{ minWidth: '200px' }}>{manifest.cliente.nombre}</td>
                 <td>{manifest.tipo_carga}</td>
-                <td>{manifest.cajas_enviadas}</td>
+                <td>{manifest.cantidad}</td>
                 <td>{manifest.destino}</td>
                 <td>{manifest.orden_servicio}</td>
-                <td>{manifest.producto}</td>
                 <td>{manifest.vuelo}</td>
                 <td>{manifest.itinerario}</td>
                 <td>{manifest.pick_up_hora}</td>

@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
 import './login.css'
-import { useRouter } from 'next/navigation'
 import axios from 'axios'
 import Loading from '@/hooks/Loading'
 import Input from '@/hooks/input/Input'

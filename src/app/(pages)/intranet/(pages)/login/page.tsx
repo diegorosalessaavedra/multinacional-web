@@ -36,8 +36,8 @@ export default function Login() {
     axios
       .post(url, dataForm)
       .then((res) => {
-        document.cookie = `token=${res.data.token}; path=/; max-age=86400; Secure; SameSite=Strict`
         router.push('/intranet')
+        document.cookie = `token=${res.data.token}; path=/; max-age=86400; Secure; SameSite=Strict`
       })
       .catch((err) => setError(err.response.data.error))
       .finally(() => setLoading(false))

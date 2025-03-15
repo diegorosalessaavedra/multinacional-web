@@ -1,5 +1,6 @@
 import { Manifiesto } from '@/interfaces'
 import './tableManifestos.css'
+import formatDate from '@/hooks/formatDate'
 
 interface Props {
   manifestos: Manifiesto[] | undefined
@@ -43,7 +44,7 @@ export default function TableManifestos({ manifestos }: Props) {
                 className={index % 2 === 0 ? 'tableManifestos-rowEven' : 'tableManifestos-rowOdd'}
               >
                 <td style={{ textAlign: 'center' }}>{index + 1}</td>
-                <td style={{ whiteSpace: 'nowrap' }}>{manifest.fecha_manifiesto}</td>
+                <td style={{ whiteSpace: 'nowrap' }}>{formatDate(manifest.fecha_manifiesto)}</td>
                 <td>{manifest.proveedor}</td>
                 <td style={{ minWidth: '200px' }}>{manifest.cliente.nombre}</td>
                 <td>{manifest.tipo_carga}</td>

@@ -31,7 +31,7 @@ export default function TableManifestos({ manifestos }: Props) {
               <th>VUELO</th>
               <th>ITINERARIO</th>
               <th>
-                RECOGO DE CARGA <br />
+                RECOJO DE CARGA <br />
                 EN PLANTA
               </th>
 

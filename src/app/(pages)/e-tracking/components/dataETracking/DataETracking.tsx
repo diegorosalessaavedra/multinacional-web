@@ -67,7 +67,7 @@ export default function DataETracking({ dataTraking, pickUp }: Props) {
                 <tr>
                   <th style={{ borderLeft: '0px' }}>Origen</th>
                   <th>Destino</th>
-                  <th>Vuelos</th>
+                  <th>Vuelo</th>
                   <th>
                     Estimado tiempo <br />
                     de despegue

@@ -39,7 +39,7 @@ export default function RootLayout({
         <Footer />
         <a
           className="whatsApp_fixed"
-          href="https://wa.me/51997279046"
+          href="https://wa.me/51983806682"
           title="Contáctanos - Multinacional Service Corp."
           target="_blank"
         >

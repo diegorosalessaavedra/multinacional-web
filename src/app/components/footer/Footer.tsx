@@ -38,6 +38,9 @@ export default function Footer() {
               target="_blank"
               title="WhatsApp - Multinacional Service Corp."
               aria-label="Contáctanos por WhatsApp"
+              // onClick={(e: any) => {
+              //   console.log('Enlace al que se navega:', e.currentTarget.href)
+              // }}
             >
               <Image src="/whatsApp.svg" alt="WhatsApp" width={50} height={50} />
             </Link>

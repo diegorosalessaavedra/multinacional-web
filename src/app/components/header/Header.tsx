@@ -109,7 +109,7 @@ export default function Header() {
           <li>
             <Link
               className={` button_animated Header-nav-ul-a-button Header-nav-ul-a-button-left`}
-              href="https://wa.me/51997279046"
+              href="https://wa.me/51983806682"
               title="Contáctanos - Multinacional Service Corp."
               target="_blank"
             >

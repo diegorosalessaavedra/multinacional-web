@@ -1,0 +1,76 @@
+/* styles.css */
+.EtrackingId_container {
+  z-index: 2;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.GenerateImage_contianer {
+  width: 800px;
+  min-width: 800px;
+}
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 0px 4px 10px 4px;
+  border: 0.1px solid #3f3f3f;
+  border-collapse: collapse;
+}
+.custom-table th {
+  font-size: 13px;
+}
+
+.custom-table td {
+  text-align: center;
+  background-color: white;
+  font-size: 13px;
+}
+.custom-table th {
+  background-color: rgb(0, 102, 255);
+  color: white;
+}
+
+.GenerateImage_img {
+  width: 200px;
+}
+
+.GenerateImage_p {
+  margin: auto;
+  margin-top: 20px;
+  width: 90%;
+  font-size: 13px;
+}
+
+.GenerateImage_p span {
+  color: red;
+  font-weight: 800;
+}
+
+.GenerateImage_p a {
+  color: blue;
+}
+
+.Chickenbaby th {
+  background-color: rgb(239, 212, 41);
+  color: white;
+}
+@media print {
+  tr {
+    page-break-inside: avoid; /* Evita que las filas se dividan entre páginas */
+  }
+
+  tr[style*='pageBreakAfter'] {
+    page-break-after: always; /* Fuerza un salto de página */
+  }
+
+  /* Asegura margen superior cuando una nueva página comienza */
+  tr[style*='marginTop'] {
+    margin-top: 50px; /* Ajusta el valor según sea necesario */
+  }
+}

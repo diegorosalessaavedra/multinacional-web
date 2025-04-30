@@ -22,7 +22,10 @@ export default function EtrackingId() {
     const element = divRef.current
     if (!element) return
 
-    html2canvas(element).then((canvas) => {
+    html2canvas(element, {
+      scale: window.devicePixelRatio, // mejora la resolución en móviles
+      useCORS: true, // por si estás cargando imágenes externas
+    }).then((canvas) => {
       const link = document.createElement('a')
       link.download = `manifiesto-${manifiesto?.id}.png`
       link.href = canvas.toDataURL('image/png')

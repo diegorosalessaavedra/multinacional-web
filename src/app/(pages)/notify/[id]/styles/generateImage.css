@@ -52,6 +52,7 @@
 .GenerateImage_img {
   width: 150px;
   height: min-content;
+  object-fit: contain;
 }
 
 .GenerateImage_p {

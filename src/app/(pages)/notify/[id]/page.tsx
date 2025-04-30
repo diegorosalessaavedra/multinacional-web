@@ -57,7 +57,7 @@ export default function EtrackingId() {
                 style={{
                   width: '120px',
                   height: '100px',
-                  objectFit: 'cover',
+                  objectFit: 'contain',
                   marginBottom: '0px',
                 }}
                 width={300}
@@ -131,7 +131,7 @@ export default function EtrackingId() {
                   width: '800px',
                   maxWidth: '800px',
                   height: 'min-content',
-                  objectFit: 'cover',
+                  objectFit: 'contain',
                   marginTop: '20px',
                 }}
               />

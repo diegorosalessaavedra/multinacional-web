@@ -57,10 +57,10 @@ export default function EtrackingId() {
               alt=""
               className="GenerateImage_img"
               style={{
-                width: '150px',
-                height: '70px',
+                width: '120px',
+                height: '100px',
                 objectFit: 'cover',
-                marginBottom: '10px',
+                marginBottom: '0px',
               }}
               width={300}
               height={300}

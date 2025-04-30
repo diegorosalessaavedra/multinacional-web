@@ -9,9 +9,20 @@
   align-items: center;
   gap: 1rem;
 }
+
+.EtrackingId_image-container {
+  width: 100%;
+  overflow-x: auto;
+}
 .GenerateImage_contianer {
   width: 800px;
-  height: 500px;
+  min-width: 800px;
+  min-height: 450px;
+  height: 450px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
 }
 .custom-table {
   width: 100%;
@@ -64,17 +75,13 @@
   color: white;
 }
 
-.terminal_img {
-  width: 100%;
-  height: min-content;
-}
-
 .EtrackingId_descargarImg {
   padding: 0.8rem 1rem;
   color: var(--text-color-white);
   background-color: var(--background-blue);
   border-radius: 0.5rem;
 }
+
 @media print {
   tr {
     page-break-inside: avoid; /* Evita que las filas se dividan entre páginas */

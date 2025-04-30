@@ -47,96 +47,109 @@ export default function EtrackingId() {
     <div className="EtrackingId_container">
       {loading && <Loading />}
       {manifiesto && (
-        <div className="GenerateImage_contianer " ref={divRef} style={{ padding: '10px' }}>
-          {manifiesto?.empresa === 'Chickenbaby' ? (
-            <Image
-              src="/logoc.jpg"
-              alt=""
-              className="GenerateImage_img"
-              style={{
-                width: '120px',
-                height: '100px',
-                objectFit: 'cover',
-                marginBottom: '0px',
-              }}
-              width={300}
-              height={300}
-            />
-          ) : (
-            <Image src="/logom.jpg" alt="" className="GenerateImage_img" width={300} height={300} />
-          )}
-          <table
-            className={`custom-table ${manifiesto?.empresa === 'Chickenbaby' ? 'Chickenbaby' : ''}`}
-          >
-            <thead>
-              <tr>
-                <th>CONSIGNATARIO</th>
-                <th>BULTOS</th>
-                <th>DESTINO</th>
-                <th>O.SERVICIO</th>
-                <th>AEROLINIA</th>
-                <th>VUELO</th>
-                <th>FEC. ENVIO</th>
-                <th>HORA SALIDA</th>
-                <th>HORA ARRIBO</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>
-                  {manifiesto?.consignatario1}
-                  {' - '}
-                  {manifiesto?.consignatario2}
-                </td>
-                <td>{manifiesto?.cantidad}</td>
-                <td>{manifiesto?.destino}</td>
-                <td>{manifiesto?.orden_servicio}</td>
-                <td>LATAM</td>
-                <td>{manifiesto?.vuelo}</td>
-                <td>{formatDate(manifiesto?.fecha_manifiesto)}</td>
-                <td> {formatFirstHourAndSubtract(manifiesto?.itinerario)}</td>
-                <td> {formatLastHour(manifiesto?.itinerario)}</td>
-              </tr>
-            </tbody>
-          </table>
+        <div className="EtrackingId_image-container">
+          <div className="GenerateImage_contianer " ref={divRef} style={{ padding: '10px' }}>
+            {manifiesto?.empresa === 'Chickenbaby' ? (
+              <Image
+                src="/logoc.jpg"
+                alt=""
+                className="GenerateImage_img"
+                style={{
+                  width: '120px',
+                  height: '100px',
+                  objectFit: 'cover',
+                  marginBottom: '0px',
+                }}
+                width={300}
+                height={300}
+              />
+            ) : (
+              <Image
+                src="/logom.jpg"
+                alt=""
+                className="GenerateImage_img"
+                width={300}
+                height={300}
+              />
+            )}
+            <table
+              className={`custom-table ${manifiesto?.empresa === 'Chickenbaby' ? 'Chickenbaby' : ''}`}
+            >
+              <thead>
+                <tr>
+                  <th>CONSIGNATARIO</th>
+                  <th>BULTOS</th>
+                  <th>DESTINO</th>
+                  <th>O.SERVICIO</th>
+                  <th>AEROLINIA</th>
+                  <th>VUELO</th>
+                  <th>FEC. ENVIO</th>
+                  <th>HORA SALIDA</th>
+                  <th>HORA ARRIBO</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    {manifiesto?.consignatario1}
+                    {' - '}
+                    {manifiesto?.consignatario2}
+                  </td>
+                  <td>{manifiesto?.cantidad}</td>
+                  <td>{manifiesto?.destino}</td>
+                  <td>{manifiesto?.orden_servicio}</td>
+                  <td>LATAM</td>
+                  <td>{manifiesto?.vuelo}</td>
+                  <td>{formatDate(manifiesto?.fecha_manifiesto)}</td>
+                  <td> {formatFirstHourAndSubtract(manifiesto?.itinerario)}</td>
+                  <td> {formatLastHour(manifiesto?.itinerario)}</td>
+                </tr>
+              </tbody>
+            </table>
 
-          <p className="GenerateImage_p text-ellipsis">
-            <b>Nota:</b> Una vez arribada la carga a destino verificar el estado de la misma antes
-            de retirarla, en caso de encontrar alguna no conformidad debera registrarla en el
-            documento{' '}
-            <span>
-              &quot;ACTA DE ENTREGA DE CONFORMIDAD Ó CARGO DE ENTREGA DE CARGA Y PARALELAMENTE EL
-              LIBRO DE RECLAMACIONES&quot;
-            </span>{' '}
-            , en caso de no hacerlo no habrá lugar a un posible reclamo ante la aerolinea. Para
-            darle seguimiento al estado de su embarque acceder al siguiente enlace:{' '}
-            <a href="https://multinacional-service.com/e-tracking" target="_blank">
-              multinacional-service.com/e-tracking
-            </a>
-          </p>
-          {manifiesto?.empresa !== 'Chickenbaby' && (
-            <Image
-              className="terminal_img"
-              src="/pixelcut.png"
-              alt=""
-              style={{ marginTop: '20px' }}
-              width={500}
-              height={500}
-            />
-          )}
-          <h2
-            className="generateImage_h2"
-            style={{
-              width: 'min-content',
-              whiteSpace: 'nowrap',
-              margin: 'auto',
-              paddingTop: '1rem',
-              paddingBottom: '1rem',
-              fontSize: '1.1rem',
-            }}
-          >
-            www.multinacional-service.com
-          </h2>
+            <p className="GenerateImage_p text-ellipsis">
+              <b>Nota:</b> Una vez arribada la carga a destino verificar el estado de la misma antes
+              de retirarla, en caso de encontrar alguna no conformidad debera registrarla en el
+              documento{' '}
+              <span>
+                &quot;ACTA DE ENTREGA DE CONFORMIDAD Ó CARGO DE ENTREGA DE CARGA Y PARALELAMENTE EL
+                LIBRO DE RECLAMACIONES&quot;
+              </span>{' '}
+              , en caso de no hacerlo no habrá lugar a un posible reclamo ante la aerolinea. Para
+              darle seguimiento al estado de su embarque acceder al siguiente enlace:{' '}
+              <a href="https://multinacional-service.com/e-tracking" target="_blank">
+                multinacional-service.com/e-tracking
+              </a>
+            </p>
+            {manifiesto?.empresa !== 'Chickenbaby' && (
+              <Image
+                src="/pixelcut.png"
+                alt=""
+                width={500}
+                height={500}
+                style={{
+                  width: '800px',
+                  maxWidth: '800px',
+                  height: 'min-content',
+                  objectFit: 'cover',
+                  marginTop: '20px',
+                }}
+              />
+            )}
+            <h2
+              className="generateImage_h2"
+              style={{
+                width: 'min-content',
+                whiteSpace: 'nowrap',
+                margin: 'auto',
+                paddingTop: '1rem',
+                paddingBottom: '1rem',
+                fontSize: '1.1rem',
+              }}
+            >
+              www.multinacional-service.com
+            </h2>
+          </div>
         </div>
       )}
       <button

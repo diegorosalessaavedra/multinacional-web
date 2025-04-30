@@ -23,8 +23,13 @@ export default function EtrackingId() {
     if (!element) return
 
     html2canvas(element, {
-      scale: window.devicePixelRatio, // mejora la resolución en móviles
-      useCORS: true, // por si estás cargando imágenes externas
+      useCORS: true,
+      allowTaint: false,
+      backgroundColor: 'white',
+      width: 800,
+      scrollX: 0,
+      scrollY: 0,
+      removeContainer: true,
     }).then((canvas) => {
       const link = document.createElement('a')
       link.download = `manifiesto-${manifiesto?.id}.png`
@@ -53,24 +58,28 @@ export default function EtrackingId() {
         <div className="EtrackingId_image-container">
           <div className="GenerateImage_contianer " ref={divRef} style={{ padding: '10px' }}>
             {manifiesto?.empresa === 'Chickenbaby' ? (
-              <Image
+              <img
                 src="/logoc.jpg"
                 alt=""
-                className="GenerateImage_img"
                 style={{
                   width: '120px',
                   height: 'auto',
+                  objectFit: 'contain',
                 }}
                 width={300}
                 height={300}
               />
             ) : (
-              <Image
+              <img
                 src="/logom.jpg"
                 alt=""
-                className="GenerateImage_img"
                 width={300}
                 height={300}
+                style={{
+                  width: '150px',
+                  height: 'auto',
+                  objectFit: 'contain',
+                }}
               />
             )}
             <table
@@ -123,14 +132,13 @@ export default function EtrackingId() {
               </a>
             </p>
             {manifiesto?.empresa !== 'Chickenbaby' && (
-              <Image
+              <img
                 src="/pixelcut.png"
                 alt=""
-                width={1000}
-                height={500}
                 style={{
                   width: '100%',
                   height: 'auto',
+                  objectFit: 'contain',
                 }}
               />
             )}

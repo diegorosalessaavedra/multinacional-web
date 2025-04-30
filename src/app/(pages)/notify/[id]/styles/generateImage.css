@@ -4,12 +4,14 @@
   height: 100vh;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 .GenerateImage_contianer {
   width: 800px;
-  min-width: 800px;
+  height: 500px;
 }
 .custom-table {
   width: 100%;
@@ -37,7 +39,8 @@
 }
 
 .GenerateImage_img {
-  width: 200px;
+  width: 150px;
+  height: min-content;
 }
 
 .GenerateImage_p {
@@ -59,6 +62,18 @@
 .Chickenbaby th {
   background-color: rgb(239, 212, 41);
   color: white;
+}
+
+.terminal_img {
+  width: 100%;
+  height: min-content;
+}
+
+.EtrackingId_descargarImg {
+  padding: 0.8rem 1rem;
+  color: var(--text-color-white);
+  background-color: var(--background-blue);
+  border-radius: 0.5rem;
 }
 @media print {
   tr {

@@ -24,7 +24,7 @@ export default function EtrackingId() {
 
     html2canvas(element).then((canvas) => {
       const link = document.createElement('a')
-      link.download = 'manifiesto.png'
+      link.download = `manifiesto-${manifiesto?.id}.png`
       link.href = canvas.toDataURL('image/png')
       link.click()
     })
@@ -38,9 +38,6 @@ export default function EtrackingId() {
       .then((res) => {
         setManifiesto(res.data.manifiesto)
         // Asegura que el DOM se actualice antes de capturar
-        setTimeout(() => {
-          downloadImage()
-        }, 500) // Puedes ajustar este tiempo si el render es lento
       })
       .catch((err) => console.log(err))
       .finally(() => setLoading(false))
@@ -119,6 +116,7 @@ export default function EtrackingId() {
           </p>
           {manifiesto?.empresa !== 'Chickenbaby' && (
             <Image
+              className="terminal_img"
               src="/pixelcut.png"
               alt=""
               style={{ marginTop: '20px' }}
@@ -141,6 +139,14 @@ export default function EtrackingId() {
           </h2>
         </div>
       )}
+      <button
+        className=" button_animated EtrackingId_descargarImg"
+        onClick={() => {
+          downloadImage()
+        }}
+      >
+        Descargar Imagen
+      </button>
     </div>
   )
 }

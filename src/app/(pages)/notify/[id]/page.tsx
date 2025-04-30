@@ -56,9 +56,7 @@ export default function EtrackingId() {
                 className="GenerateImage_img"
                 style={{
                   width: '120px',
-                  height: '100px',
-                  objectFit: 'contain',
-                  marginBottom: '0px',
+                  height: 'auto',
                 }}
                 width={300}
                 height={300}
@@ -125,14 +123,11 @@ export default function EtrackingId() {
               <Image
                 src="/pixelcut.png"
                 alt=""
-                width={500}
+                width={1000}
                 height={500}
                 style={{
-                  width: '800px',
-                  maxWidth: '800px',
-                  height: 'min-content',
-                  objectFit: 'contain',
-                  marginTop: '20px',
+                  width: '100%',
+                  height: 'auto',
                 }}
               />
             )}

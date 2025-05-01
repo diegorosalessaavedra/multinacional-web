@@ -128,6 +128,7 @@ export default function DataETracking({ dataTraking, pickUp }: Props) {
                 </tr>
                 <tr className="dataETracking_events-rowEven">
                   <td style={{ color: '#1a66a3' }}>Recogo de carga en planta</td>
+
                   <td style={{ color: '#1a66a3' }}>LIMA</td>
                   <td></td>
                   <td></td>
@@ -135,6 +136,20 @@ export default function DataETracking({ dataTraking, pickUp }: Props) {
                     {pickUp?.pick_up === 'PENDIENTE'
                       ? 'Pendiente de Realizar'
                       : pickUp?.pick_up_hora}
+                  </td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr className="dataETracking_events-rowEven">
+                  <td style={{ color: '#1a66a3' }}>Ingreso a terminal de carga </td>
+
+                  <td style={{ color: '#1a66a3' }}>LIMA</td>
+                  <td></td>
+                  <td></td>
+                  <td style={{ color: '#1a66a3' }}>
+                    {pickUp?.ingreso_carga === 'PENDIENTE'
+                      ? 'Pendiente de Realizar'
+                      : pickUp?.ingreso_carga_hora}
                   </td>
                   <td></td>
                   <td></td>

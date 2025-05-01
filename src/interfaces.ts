@@ -86,4 +86,6 @@ export interface PickUp {
   id: number
   pick_up: string
   pick_up_hora: string | null
+  ingreso_carga: string
+  ingreso_carga_hora: string | null
 }

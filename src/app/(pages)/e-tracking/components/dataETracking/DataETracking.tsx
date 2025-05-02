@@ -157,6 +157,11 @@ export default function DataETracking({ dataTraking, pickUp }: Props) {
                 {dataTraking?.events
                   .slice()
                   .reverse()
+                  .filter(
+                    (event) =>
+                      event.Descripción !== 'Embarque esperando emision' &&
+                      event.Descripción !== 'Reserva confirmada'
+                  )
                   .map((event, index) => (
                     <tr
                       key={index}

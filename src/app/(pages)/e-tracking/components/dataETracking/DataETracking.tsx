@@ -54,7 +54,6 @@ export default function DataETracking({ dataTraking, pickUp }: Props) {
       </p>
     )
   }
-  console.log(pickUp)
 
   return (
     <>

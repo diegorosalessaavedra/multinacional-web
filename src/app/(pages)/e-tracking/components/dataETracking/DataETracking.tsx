@@ -147,7 +147,7 @@ export default function DataETracking({ dataTraking, pickUp }: Props) {
                   <td></td>
                   <td></td>
                   <td style={{ color: '#1a66a3' }}>
-                    {pickUp?.ingreso_carga_hora === 'PENDIENTE'
+                    {pickUp?.ingreso_carga === 'PENDIENTE'
                       ? 'Pendiente de Realizar'
                       : pickUp?.ingreso_carga_hora}
                   </td>

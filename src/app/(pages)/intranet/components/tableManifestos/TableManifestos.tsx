@@ -2,6 +2,7 @@ import { Manifiesto } from '@/interfaces'
 import './tableManifestos.css'
 import formatDate from '@/hooks/formatDate'
 import Link from 'next/link'
+import { FaLightbulb } from 'react-icons/fa'
 
 interface Props {
   manifestos: Manifiesto[] | undefined
@@ -38,6 +39,7 @@ export default function TableManifestos({ manifestos }: Props) {
               <th>CONSIGNATARIO 1</th>
               <th>CONSIGNATARIO 2</th>
               <th>OBSERVACIONES</th>
+              <th>NOTIFY</th>
             </tr>
           </thead>
           <tbody>
@@ -68,6 +70,16 @@ export default function TableManifestos({ manifestos }: Props) {
                 <td style={{ minWidth: '200px' }}>{manifest.consignatario1}</td>
                 <td style={{ minWidth: '200px' }}>{manifest.consignatario2}</td>
                 <td>{manifest.observacion}</td>
+                <td style={{ textAlign: 'center' }}>
+                  <Link
+                    href={`/notify/${manifest.id}`}
+                    title="Nuestros servicios de transporte de carga"
+                    target="_blank"
+                    style={{ fontSize: '1.5rem' }}
+                  >
+                    <FaLightbulb />
+                  </Link>
+                </td>
               </tr>
             ))}
           </tbody>

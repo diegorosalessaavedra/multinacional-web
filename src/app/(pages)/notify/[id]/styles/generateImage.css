@@ -5,9 +5,11 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   gap: 1rem;
+  padding-top: 130px;
+  padding-bottom: 30px;
 }
 
 .EtrackingId_image-container {

@@ -77,7 +77,7 @@ export default function TableManifestos({ manifestos }: Props) {
                     target="_blank"
                     style={{
                       fontSize: '1.5rem',
-                      color: `${manifest.orden_servicio.length > 0 ? '#13a216' : '#e5de1f'}`,
+                      color: `${manifest.orden_servicio.length > 0 ? '#13a216' : '#ff6200'}`,
                     }}
                   >
                     <FaLightbulb />

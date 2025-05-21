@@ -75,7 +75,10 @@ export default function TableManifestos({ manifestos }: Props) {
                     href={`/notify/${manifest.id}`}
                     title="Nuestros servicios de transporte de carga"
                     target="_blank"
-                    style={{ fontSize: '1.5rem' }}
+                    style={{
+                      fontSize: '1.5rem',
+                      color: `${manifest.orden_servicio.length > 0 ? 'green' : 'yellow'}`,
+                    }}
                   >
                     <FaLightbulb />
                   </Link>

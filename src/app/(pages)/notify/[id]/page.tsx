@@ -72,10 +72,10 @@ export default function EtrackingId() {
               <img
                 src="/logom.jpg"
                 alt=""
-                width={300}
+                width={400}
                 height={300}
                 style={{
-                  width: '150px',
+                  width: '200px',
                   height: 'auto',
                   objectFit: 'contain',
                 }}
@@ -147,7 +147,6 @@ export default function EtrackingId() {
                 width: 'min-content',
                 whiteSpace: 'nowrap',
                 margin: 'auto',
-                paddingTop: '1rem',
                 paddingBottom: '1rem',
                 fontSize: '1.1rem',
               }}

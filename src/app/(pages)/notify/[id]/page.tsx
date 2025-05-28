@@ -8,7 +8,7 @@ import { useParams } from 'next/navigation'
 import axios from 'axios'
 import formatDate from '@/hooks/formatDate'
 import './styles/generateImage.css'
-import { formatFirstHour, formatFirstHourAndSubtract, formatLastHour } from '@/hooks/formatHoure'
+import { formatFirstHour, formatLastHour } from '@/hooks/formatHoure'
 
 export default function EtrackingId() {
   const { id } = useParams()

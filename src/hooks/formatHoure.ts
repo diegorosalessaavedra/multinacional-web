@@ -15,7 +15,7 @@ const formatFirstHourAndSubtract = (timeRange: string): string => {
 }
 
 const formatFirstHour = (timeRange: string): string => {
-  const [startTime, endTime] = timeRange.split(' - ')
+  const [startTime] = timeRange.split(' - ')
   return startTime
 }
 

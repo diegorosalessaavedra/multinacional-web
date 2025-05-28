@@ -14,9 +14,14 @@ const formatFirstHourAndSubtract = (timeRange: string): string => {
   return `${newHours}:${newMinutes}`
 }
 
+const formatFirstHour = (timeRange: string): string => {
+  const [startTime, endTime] = timeRange.split(' - ')
+  return startTime
+}
+
 const formatLastHour = (timeRange: string): string => {
   const [, endTime] = timeRange.split(' - ')
   return endTime
 }
 
-export { formatFirstHourAndSubtract, formatLastHour }
+export { formatFirstHourAndSubtract, formatLastHour, formatFirstHour }

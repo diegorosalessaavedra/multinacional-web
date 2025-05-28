@@ -8,7 +8,7 @@ import { useParams } from 'next/navigation'
 import axios from 'axios'
 import formatDate from '@/hooks/formatDate'
 import './styles/generateImage.css'
-import { formatFirstHourAndSubtract, formatLastHour } from '@/hooks/formatHoure'
+import { formatFirstHour, formatFirstHourAndSubtract, formatLastHour } from '@/hooks/formatHoure'
 
 export default function EtrackingId() {
   const { id } = useParams()
@@ -110,7 +110,7 @@ export default function EtrackingId() {
                   <td>LATAM</td>
                   <td>{manifiesto?.vuelo}</td>
                   <td>{formatDate(manifiesto?.fecha_manifiesto)}</td>
-                  <td> {formatFirstHourAndSubtract(manifiesto?.itinerario)}</td>
+                  <td> {formatFirstHour(manifiesto?.itinerario)}</td>
                   <td> {formatLastHour(manifiesto?.itinerario)}</td>
                 </tr>
               </tbody>
